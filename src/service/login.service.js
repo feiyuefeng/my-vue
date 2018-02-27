@@ -3,7 +3,12 @@
  */
 import http from './axios'
 
-export function checkToken () {
-  const url = ''
+export function checkToken (param) {
+  const url = '/user/testToken'
+  return http.post(url, param)
+}
+
+export function queryById (id) {
+  const url = '/user/queryById?id=' + id
   return http.get(url)
 }
